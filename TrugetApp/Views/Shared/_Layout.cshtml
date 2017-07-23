@@ -1,0 +1,81 @@
+﻿@inject Microsoft.ApplicationInsights.AspNetCore.JavaScriptSnippet JavaScriptSnippet
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - TrugetApp</title>
+
+    <environment names="Development">
+        <link href="~/lib/materialize/dist/css/materialize.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+              asp-fallback-href="lib/font-awesome/css/font-awesome.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+    <environment names="Staging,Production">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+    @Html.Raw(JavaScriptSnippet.FullScript)
+</head>
+<body>
+    <header>
+        <nav class="nav-extended amber darken-2">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <a asp-controller="Home" asp-action="Index" class="brand-logo center">Truget</a>
+                    <a href="#" data-activates="mobile-side-nav" class="button-collapse">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                    </a>
+                    <ul id="nav-mobile" class="left hide-on-med-and-down">
+                        <menulink controller-name="Home" action-name="Index" menu-text="Home"></menulink>
+                        <menulink controller-name="Trucks" action-name="Index" menu-text="Trucks"></menulink>
+                    </ul>
+                    <ul class="side-nav" id="mobile-side-nav">
+                        <li class="logo center amber darken-2">
+                            <span>Menu</span>
+                        </li>
+                        <li class="@(ViewBag.Controller == "Home" ? "active" : string.Empty)"><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                        <li class="@(ViewBag.Controller == "Trucks" ? "active" : string.Empty)"><a asp-area="" asp-controller="Trucks" asp-action="Index">Trucks</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container">
+        @RenderBody()
+    </main>
+    <footer class="page-footer center-align grey darken-3">
+        <div class="container">
+            <div class="footer-copyright">
+                &copy; 2017 - TrugetApp
+            </div>
+        </div>
+    </footer>
+    <environment names="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/materialize/dist/js/materialize.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+    <environment names="Staging,Production">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk">
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+        </script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+    </environment>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

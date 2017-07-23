@@ -1,0 +1,151 @@
+@model IEnumerable<TrugetApp.Models.TruckModel>
+
+@{
+    ViewData["Title"] = "Index";
+    var types = ViewData["TruckTypes"] != null ? (List<TruckType>)ViewData["TruckTypes"] : new List<TruckType>();
+    var sizes = ViewData["TruckSizes"] != null ? (List<TruckSize>)ViewData["TruckSizes"] : new List<TruckSize>();
+}
+
+
+<div class="section">
+    <ul class="collapsible popout" data-collapsible="accordion">
+        <li>
+            <div class="collapsible-header font-20px">Trucks types</div>
+            <div class="collapsible-body">
+                <ul>
+                    @foreach (var type in types)
+                    {
+                        <li data-id="@type.Id">
+                            <h5 class="light-blue-text text-darken-1">@type.TypeName</h5>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header font-20px">Trucks sizes</div>
+            <div class="collapsible-body">
+                <ul>
+                    @foreach (var size in sizes)
+                    {
+                        <li data-id="@size.Id">
+                            <h5 class="light-blue-text text-darken-1">@size.SizeName</h5>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </li>
+    </ul>
+</div>
+
+
+
+<div class="row">
+    <div class="col s12">
+        
+    </div>
+
+    @*<div class="col s6">
+        <div class="section">
+            <h3>Trucks types</h3>
+            <a href="#!" class="btn deep-purple darken-2" onclick="Materialize.showStaggeredList('#staggered-types')">Show Types</a>
+            <ul id="staggered-types" class="staggered">
+                @foreach (var type in types)
+                {
+                    <li data-id="@type.Id">
+                        <h4 class="light-blue-text text-darken-1">@type.TypeName</h4>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+    <div class="col s6">
+        <div class="section">
+            <h3>Trucks sizes</h3>
+            <a href="#!" class="btn deep-purple darken-2" onclick="Materialize.showStaggeredList('#staggered-sizes')">Show Sizes</a>
+            <ul id="staggered-sizes" class="staggered">
+                @foreach (var size in sizes)
+                {
+                    <li data-id="@size.Id">
+                        <h4 class="light-blue-text text-darken-1">@size.SizeName</h4>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>*@
+</div>
+
+
+@*<table class="highlight responsive-table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MaxHeight)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MaxWidth)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MaxLength)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MaxWeight)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Type)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Size)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UDID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Image)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MaxHeight)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MaxWidth)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MaxLength)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MaxWeight)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Type)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Size)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UDID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Image)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>*@

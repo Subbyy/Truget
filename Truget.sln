@@ -3,8 +3,59 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.15
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrugetApp", "TrugetApp\TrugetApp.csproj", "{2D227C7B-C6E4-47F7-9CB1-8EA1F3C378EC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Truget.Data", "Truget.Data\Truget.Data.csproj", "{F519DFF0-63AB-43DE-B123-3CDD607006D2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Truget.Services", "Truget.Services\Truget.Services.csproj", "{DC385CB4-F235-4D1F-B01A-2963D2A3A28D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Truget.Common", "Truget.Common\Truget.Common.csproj", "{19F9996F-7DA0-43BF-A7B9-EDDEECCDFEAF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataAccess", "DataAccess", "{F1B4BADB-7545-4DA4-B4F2-3B1510A39B25}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BusinessLogic", "BusinessLogic", "{655E313D-35CF-4014-B087-8E88CAE0014E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Common", "_Common", "{5C8B867E-0E85-4347-8558-FA4EE1EB6220}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{97E3F549-0398-423B-B9A4-69B5C99C7ACE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Truget.Infrastructure", "Truget.Infrastructure\Truget.Infrastructure.csproj", "{35A38AB7-BF37-46EB-9018-417ED755C88B}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2D227C7B-C6E4-47F7-9CB1-8EA1F3C378EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D227C7B-C6E4-47F7-9CB1-8EA1F3C378EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D227C7B-C6E4-47F7-9CB1-8EA1F3C378EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D227C7B-C6E4-47F7-9CB1-8EA1F3C378EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F519DFF0-63AB-43DE-B123-3CDD607006D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F519DFF0-63AB-43DE-B123-3CDD607006D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F519DFF0-63AB-43DE-B123-3CDD607006D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F519DFF0-63AB-43DE-B123-3CDD607006D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC385CB4-F235-4D1F-B01A-2963D2A3A28D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC385CB4-F235-4D1F-B01A-2963D2A3A28D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC385CB4-F235-4D1F-B01A-2963D2A3A28D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC385CB4-F235-4D1F-B01A-2963D2A3A28D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19F9996F-7DA0-43BF-A7B9-EDDEECCDFEAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19F9996F-7DA0-43BF-A7B9-EDDEECCDFEAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19F9996F-7DA0-43BF-A7B9-EDDEECCDFEAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19F9996F-7DA0-43BF-A7B9-EDDEECCDFEAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35A38AB7-BF37-46EB-9018-417ED755C88B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35A38AB7-BF37-46EB-9018-417ED755C88B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35A38AB7-BF37-46EB-9018-417ED755C88B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35A38AB7-BF37-46EB-9018-417ED755C88B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2D227C7B-C6E4-47F7-9CB1-8EA1F3C378EC} = {97E3F549-0398-423B-B9A4-69B5C99C7ACE}
+		{F519DFF0-63AB-43DE-B123-3CDD607006D2} = {F1B4BADB-7545-4DA4-B4F2-3B1510A39B25}
+		{DC385CB4-F235-4D1F-B01A-2963D2A3A28D} = {655E313D-35CF-4014-B087-8E88CAE0014E}
+		{19F9996F-7DA0-43BF-A7B9-EDDEECCDFEAF} = {5C8B867E-0E85-4347-8558-FA4EE1EB6220}
+		{35A38AB7-BF37-46EB-9018-417ED755C88B} = {5C8B867E-0E85-4347-8558-FA4EE1EB6220}
 	EndGlobalSection
 EndGlobal
